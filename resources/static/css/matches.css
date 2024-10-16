@@ -104,7 +104,7 @@ body {
     margin-top: 10px;
     padding: 10px 20px;
     font-size: 18px;
-    background-color: #B3F36D;
+    background-color: #bcf57f;
     color: #ffffff;
     border: none;
     border-radius: 8px;
@@ -114,6 +114,6 @@ body {
 }
 
 .matches-filter-form .btn:hover {
-    background-color: #9BF33D;
+    background-color: #b1f569;
     transform: scale(1.01);
 }

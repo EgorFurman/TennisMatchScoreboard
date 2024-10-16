@@ -22,7 +22,7 @@ body {
 .btn {
     text-decoration: none;
     padding: 15px 30px;
-    background-color: #B3F36D;
+    background-color: #bcf57f;
     color: #ffffff;
     font-size: 22px;
     font-weight: bold;
@@ -36,6 +36,6 @@ body {
 }
 
 .btn:hover {
-    background-color: #9BF33D;
+    background-color: #b1f569;
     transform: scale(1.01);
 }

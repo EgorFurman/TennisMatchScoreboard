@@ -138,7 +138,7 @@ def match_score_post_handler(environ, start_response: Callable, view: Type["Base
     try:
         winner = parse_request_body(environ)['winner']
     except KeyError:
-        raise MissingRequestFieldsError('winner')
+        raise MissingRequestFieldsError('winner', )
 
     DatabaseService.update_match_score_by_uuid(
         uuid=uuid,

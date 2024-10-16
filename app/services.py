@@ -216,27 +216,32 @@ class DatabaseService:
         return [PlayersDTO.model_validate(player, from_attributes=True) for player in PlayersRepository.list()]
 
     @classmethod
-    def update_match_score_by_uuid(cls, uuid: str, winner_name: str):
+    def update_match_score_by_uuid(cls, uuid: str, score: MatchScore):
+        match = MatchesRepository.get(uuid=uuid)
+
+        cls._verify_match_exists(
+            uuid=uuid,
+            match=match,
+        )
+
+        MatchesRepository.update(
+            uuid=uuid,
+            score=score,
+        )
+
+    @classmethod
+    def update_match_winner_by_uuid(cls, uuid: str, winner_name: str):
         match = MatchesRepository.get(uuid=uuid, with_players=True)
 
         cls._verify_match_exists(
             uuid=uuid,
-            match=match
+            match=match,
         )
 
-        score = ScoreboardService.update_match_score(score=match.score, winner_name=winner_name)
-
-        if ScoreboardService.is_win(score):
-            MatchesRepository.update(
-                uuid=uuid,
-                score=score,
-                winner_id=match.player1.id if match.player1.name == winner_name else match.player2.id
-            )
-        else:
-            MatchesRepository.update(
-                uuid=uuid,
-                score=score,
-            )
+        MatchesRepository.update(
+            uuid=uuid,
+            winner_id=match.player1.id if match.player1.name == winner_name else match.player2.id
+        )
 
     @staticmethod
     def _init_score(first_player_name: str, second_player_name: str) -> MatchScore:

@@ -2,7 +2,7 @@ from typing import Callable, Type
 from urllib.parse import parse_qs
 
 from app.router import Router
-from app.services import MatchesCacheService, DatabaseService
+from app.services import MatchesCacheService, ScoreboardService, DatabaseService
 from app.views import BaseView, ViewToHTML
 from app.exceptions import (
     MethodNotAllowed, PathNotFoundError, MissingRequestHeadersError, MissingRequestFieldsError,
@@ -140,10 +140,21 @@ def match_score_post_handler(environ, start_response: Callable, view: Type["Base
     except KeyError:
         raise MissingRequestFieldsError('winner', )
 
-    DatabaseService.update_match_score_by_uuid(
-        uuid=uuid,
+    score = ScoreboardService.update_match_score(
+        score=DatabaseService.get_match_by_uuid_with_players(uuid=uuid).score,
         winner_name=winner
     )
+
+    DatabaseService.update_match_score_by_uuid(
+        uuid=uuid,
+        score=score
+    )
+
+    if ScoreboardService.is_win(score=score):
+        DatabaseService.update_match_winner_by_uuid(
+            uuid=uuid,
+            winner_name=winner
+        )
 
     start_response('302 Found', [('Location', f'/match-score?uuid={uuid}')])
 

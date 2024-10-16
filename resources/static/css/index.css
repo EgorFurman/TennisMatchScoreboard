@@ -45,3 +45,38 @@ body {
     display: flex;
     gap: 20px;
 }
+
+
+/* Media query for screen widths less than 600px */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        justify-content: space-around; /* Ensure content is spread vertically */
+        height: 100vh; /* Force content to fill the screen */
+    }
+
+    .logo h1 {
+        font-size: 48px; /* Reduce the logo size */
+        margin-top: 25%;
+        margin-bottom: 6%; /* Adjust spacing */
+    }
+
+    .navigation {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center the buttons */
+        gap: 35px; /* Reduce the gap between buttons */
+        margin-bottom: 75%;
+    }
+
+   .btn {
+        display: flex; /* Enable flexbox for the button */
+        justify-content: center; /* Horizontally center text */
+        align-items: center; /* Vertically center text */
+        width: 200px; /* Set button width */
+        height: 45px; /* Set button height */
+        padding: 12px 20px; /* Remove padding */
+        text-align: center;
+        font-size: 20px; /* Adjust font size */
+        margin-bottom: 1px; /* Ensure minimal gap between buttons */
+    }
+}

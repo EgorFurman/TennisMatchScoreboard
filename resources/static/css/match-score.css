@@ -129,4 +129,106 @@ body {
 
 }
 
+/* Media query for mobile screens (up to 600px width) */
+@media (max-width: 600px) {
+
+    /* Rotate the body and shift everything to the right and down */
+    body {
+        transform: rotate(90deg) translateX(20%) translateY(200px); /* Move right by 100px and further down by 100px */
+        transform-origin: center center;
+        height: 100vw;
+        width: 100vh;
+        overflow-x: hidden; /* Prevent overflow */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Adjust the logo */
+    .logo {
+        font-size: 28px;
+        text-align: center;
+        position: relative;
+        margin-left: 0;
+        margin-top: 0;
+        top: 0;
+    }
+
+    /* Players container - shift horizontally and vertically */
+    .players-container {
+        margin: 0;
+        text-align: left;
+        padding-left: 10px;
+        margin-top: 50px; /* Adjust vertical position */
+        margin-left: 80px; /* Shift to the right */
+    }
+
+    .player {
+        font-size: 18px;
+        padding: 10px;
+        text-align: left;
+    }
+
+    /* Scoreboard table adjustments - reduce distance between columns and shift down */
+    .scoreboard-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 70px; /* Shift down further */
+        margin-left: 50px; /* Shift to the right */
+    }
+
+    .scoreboard-table {
+        font-size: 20px;
+        padding: 10px;
+        border-spacing: 5px; /* Reduce the space between columns */
+        border-collapse: collapse; /* Remove any additional space between table borders */
+    }
+
+    .scoreboard-table th,
+    .scoreboard-table td {
+        padding: 5px 10px; /* Reduce padding inside the cells to bring columns closer */
+    }
+
+    .scoreboard-table .score {
+        font-size: 28px;
+        padding: 5px 10px; /* Smaller padding for the score cells */
+    }
+
+    /* Buttons container adjustments */
+    .buttons-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+        margin-top: 80px;
+        margin-left: 100px;
+    }
+
+    .btn {
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+    }
+
+    /* Winner/Loser container adjustments */
+    .winner-container {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+        margin-top: 90px;
+        margin-left: 100px;
+    }
+
+    .winner-png,
+    .loser-png {
+        width: 50px;
+        margin: 10px 0;
+    }
+}
+
+
+
+
+
 

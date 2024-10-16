@@ -54,7 +54,7 @@ body {
 
 .matches-list ul li {
     text-align: center;
-    margin: 10px 0;
+    margin: 12px 0;
     font-size: 20px;
     color: #3A3335;
 }
@@ -116,4 +116,60 @@ body {
 .matches-filter-form .btn:hover {
     background-color: #b1f569;
     transform: scale(1.01);
+}
+
+
+@media (max-width: 600px) {
+
+    /* Adjusting the logo */
+    .logo h1 {
+        font-size: 36px;
+        margin-top: 10%; /* Keep the logo closer to the top */
+        text-align: center;
+    }
+
+    /* Adjust the filter form to be centered and lower */
+    .matches-filter-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center form and button horizontally */
+        margin-top: 45%; /* Push the form further down */
+    }
+
+    .matches-filter-form label {
+        font-size: 16px; /* Slightly smaller text size for mobile */
+    }
+
+    .matches-filter-form select {
+        font-size: 14px; /* Adjust select box text size for mobile */
+        padding: 8px; /* Reduce padding for better fit */
+    }
+
+    .matches-filter-form .btn {
+        font-size: 16px; /* Adjust button font size */
+        padding: 8px 16px; /* Reduce button padding */
+        margin-top: 15px; /* Slightly larger margin between label and button */
+    }
+
+    /* Move the list of matches further down */
+    .matches-list {
+        margin-top: 8%; /* Push the list lower */
+        display: flex;
+        justify-content: center;
+    }
+
+    .matches-list ul li {
+        margin: 13px 0;
+    }
+    /* Pagination section adjustment */
+    .pagination {
+        bottom: 10%; /* Keep pagination at the bottom but slightly higher */
+        width: 100%; /* Ensure pagination takes full width */
+        justify-content: center;
+    }
+
+    .pagination a {
+        font-size: 14px; /* Slightly smaller text size for pagination */
+        margin: 0 5px; /* Reduce spacing between links */
+    }
 }

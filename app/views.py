@@ -22,6 +22,3 @@ class ViewToHTML(BaseView):
     @classmethod
     def render_template(cls, template_name: str, *args, **kwargs) -> str:
         return cls.env.get_template(template_name).render(*args, **kwargs)
-
-
-#print(os.path.abspath('resources/favicon.png'))

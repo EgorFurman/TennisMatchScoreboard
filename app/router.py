@@ -1,4 +1,3 @@
-import re
 from typing import Callable
 
 from app.exceptions import MethodNotAllowed, PathNotFoundError

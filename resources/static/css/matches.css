@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Logo Styling */
+.logo h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2.9%;
+    color: #3A3335;
+    font-weight: bold;
+    text-align: center;
+    font-size: 46px;
+}
+
+/* Filter Form Styling */
+.matches-filter-form {
+    position: relative;
+    margin-top: 9%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.matches-filter-form label {
+    font-size: 18px;
+    color: #3A3335;
+    font-weight: bold;
+}
+
+.matches-filter-form select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #B3F36D;
+    margin-left: 10px;
+}
+
+/* Matches List Styling */
+.matches-list {
+    margin-top: 1.2%;
+    display: flex;
+    justify-content: center;
+}
+
+.matches-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.matches-list ul li {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 20px;
+    color: #3A3335;
+}
+
+.matches-list ul li a {
+    text-decoration: none;
+    color: #3A3335;
+    transition: color 0.3s ease;
+}
+
+.matches-list ul li a:hover {
+    color: #9BF33D;
+}
+
+.pagination {
+    position: fixed;
+    bottom: 7%;
+    left: 50%;
+    display: flex;
+    width: 240px;
+    justify-content: space-between;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+.pagination a {
+    font-size: 16px;
+    color: #3A3335;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.pagination a:hover {
+    color: #E667AF;
+}
+
+/* Disabled Pagination Styling */
+.pagination a.disabled {
+    color: #999999;
+    pointer-events: none;
+    cursor: default;
+}
+
+.matches-filter-form .btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #B3F36D;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(195, 243, 109, 0.6);
+    transition: background-color 0.3s ease;
+}
+
+.matches-filter-form .btn:hover {
+    background-color: #9BF33D;
+    transform: scale(1.01);
+}

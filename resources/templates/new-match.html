@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/new-match.css">
+    <title>New match</title>
+</head>
+<body class="new-match">
+    <div>
+        <form action="/new-match" method="POST" class="form-container">
+            <div class="logo">
+                <h1 class="new-match-logo">Create Match</h1>
+            </div>
+            <label>
+                <input name="player1" type="text" placeholder="First player name" required class="input-player">
+            </label>
+            <label>
+                <input name="player2" type="text" placeholder="Second player name" required>
+            </label>
+            <button type="submit" class="btn">Start</button>
+        </form>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

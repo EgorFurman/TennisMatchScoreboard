@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/match-score.css">
+    <link href="https://fonts.cdnfonts.com/css/ds-digital" rel="stylesheet">
+    <title>Match score</title>
+</head>
+    <body class="">
+        <div class="logo">
+            <h1>Match Score</h1>
+        </div>
+            <div class="match-score">
+            <div class="players-container">
+                <table>
+                    <tbody>
+                    {% for player, player_score in match.score.items() %}
+                    <tr>
+                        <td class="player">{{ player }}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="scoreboard-container">
+                <table class="scoreboard-table">
+                    <thead>
+                    <tr>
+                        <th>Sets</th>
+                        <th>Games</th>
+                        <th>Points</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for player, player_score in match.score.items() %}
+                    <tr>
+                        <td class="score">{{ player_score.sets }}</td>
+                        <td class="score">{{ player_score.games }}</td>
+                        <td class="score">{{ player_score.points }}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% if match.winner_id == None %}
+            <div class="buttons-container">
+                <table>
+                    <tbody>
+                    {% for player, player_score in match.score.items() %}
+                    <tr>
+                        <td class="btn-col">
+                            <form action="/match-score?uuid={{ match.uuid }}" method="POST">
+                                <input type="hidden" name="winner" value="{{ player }}">
+                                <button type="Submit" class="btn">+</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+             <div class="winner-container">
+                 <table>
+                    <tbody>
+                    {% for player, player_score in match.score.items() %}
+                    <tr>
+                        {% if player == match.winner.name %}
+                        <td>
+                            <img src="images/winner.png" alt="happy jopi4" class="winner-png">
+                        </td>
+                        {% else %}
+                        <td>
+                            <img src="images/loser.png" alt="angry jopi4" class="loser-png">
+                        </td>
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+             </div>
+            {% endif %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/matches.css">
+    <title>Completed matches</title>
+</head>
+<body class="matches">
+    <div class="logo">
+        <h1>Completed Matches</h1>
+    </div>
+    <div class="main-content">
+        <form class="matches-filter-form" method="get" action="/matches?filter_by_player_name={{ filter_by_player_name }}">
+            <label for="filter_by_player_name">Filter by player name:
+                <select id="filter_by_player_name" name="filter_by_player_name">
+                    <option value="">All players</option>
+                    {% for player in players %}
+                    <option value="{{ player.name }}" {% if player.name == filter_by_player_name %}selected{% endif %}>
+                        {{ player.name }}
+                    </option>
+                    {% endfor %}
+                </select>
+            </label>
+            <button type="submit" class="btn">Search</button>
+        </form>
+        <div class="matches-list">
+            <ul>
+                {% for match in matches %}
+                <li>
+                    <a href="/match-score?uuid={{match.uuid}}">
+                        {{match.player1.name}} vs {{match.player2.name}} - Winner: {{match.winner.name}}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="pagination">
+            {% if page != 1 %}
+            <a href="/matches?page={{ page - 1 }}{% if filter_by_player_name %}&filter_by_player_name={{ filter_by_player_name }}{% endif %}">previous page</a>
+            {% else %}
+            <a class="disabled">previous page</a>
+            {% endif %}
+            {% if page != total_pages %}
+            <a href="/matches?page={{ page + 1 }}{% if filter_by_player_name %}&filter_by_player_name={{ filter_by_player_name }}{% endif %}">next page</a>
+            {% else %}
+            <a class="disabled">next page</a>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    color: #3A3335;
+    font-weight: bold;
+    text-align: center;
+    font-size: 48px;
+    margin-top: 3%;
+}
+
+.match-score {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2%;
+}
+
+.players-container {
+    position: absolute;
+    left: 0;
+    margin-bottom: -5%;
+    margin-left: 5%;
+}
+
+.player {
+    font-weight: bold;
+    font-size: 36px;
+    color: #3A3335;
+    padding: 48px 10px;
+    text-align: center;
+}
+
+.scoreboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scoreboard-table {
+    font-size: 38px;
+    border-collapse: collapse;
+    align-self: center;
+}
+
+.scoreboard-table th {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #3A3335;
+    padding: 10px 20px;
+}
+
+.scoreboard-table .score {
+    font-family: "DS-Digital", monospace;
+    font-size: 80px;
+    color: #080c0d;
+    text-align: center;
+    width: 225px;
+    padding: 30px 20px;
+}
+
+.buttons-container {
+    position: absolute;
+    right: 0;
+    margin-right: 18%;
+    margin-bottom: -4.5%;
+}
+
+.btn-col {
+    padding: 40px 6px;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #B3F36D;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(195, 243, 109, 0.6);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    padding: 6px 6px;
+    border-radius: 30px;
+    margin-left: 30px;
+    width: 60px;
+    height: 60px;
+}
+
+.btn:hover {
+    background-color: #9BF33D;
+    transform: scale(1.01);
+}
+
+.winner-container {
+    position: absolute;
+    right: 0;
+    margin-right: 18%;
+    margin-bottom: -3.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.winner-png {
+    width: 90px;
+    height: auto;
+    margin: 25px 0;
+    transform: skew(-12deg, 0deg);
+    border-radius: 25%;
+}
+
+.loser-png {
+    width: 90px;
+    height: auto;
+    margin: 25px 0;
+    transform: skew(-12deg, 0deg);
+
+}
+
+

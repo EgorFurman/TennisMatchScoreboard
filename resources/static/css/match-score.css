@@ -129,103 +129,105 @@ body {
 
 }
 
-/* Media query for mobile screens (up to 600px width) */
-@media (max-width: 600px) {
+/* Existing Styles (kept unchanged) */
 
-    /* Rotate the body and shift everything to the right and down */
+/* Additional media query for smartphones */
+/* Additional media query for smartphones */
+/* Additional media query for smartphones */
+/* Additional media query for smartphones */
+/* Existing Styles (kept unchanged) */
+
+/* Additional media query for smartphones */
+@media only screen and (max-width: 768px) {
     body {
-        transform: rotate(90deg) translateX(20%) translateY(200px); /* Move right by 100px and further down by 100px */
-        transform-origin: center center;
-        height: 100vw;
-        width: 100vh;
-        overflow-x: hidden; /* Prevent overflow */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* Adjust the logo */
-    .logo {
-        font-size: 28px;
-        text-align: center;
-        position: relative;
-        margin-left: 0;
-        margin-top: 0;
-        top: 0;
-    }
-
-    /* Players container - shift horizontally and vertically */
-    .players-container {
+        font-size: 14px;
+        padding: 0;
         margin: 0;
-        text-align: left;
-        padding-left: 10px;
-        margin-top: 50px; /* Adjust vertical position */
-        margin-left: 80px; /* Shift to the right */
+        height: 100vh; /* Ensure the height is set to viewport height on mobile */
+        overflow: hidden; /* Disable scrolling on mobile */
+    }
+
+    .logo {
+        font-size: 32px;
+        margin-top: 2%;
+    }
+
+    .match-score {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .players-container {
+        position: static;
+        margin-left: 0;
+        margin-bottom: 8%;
     }
 
     .player {
-        font-size: 18px;
-        padding: 10px;
-        text-align: left;
+        font-size: 24px;
+        padding: 10px 5px;
     }
 
-    /* Scoreboard table adjustments - reduce distance between columns and shift down */
     .scoreboard-container {
-        width: 100%;
-        display: flex;
-        justify-content: center;
         align-items: center;
-        margin-top: 70px; /* Shift down further */
-        margin-left: 50px; /* Shift to the right */
+        width: 100%;
+        flex-direction: row;
     }
 
     .scoreboard-table {
-        font-size: 20px;
-        padding: 10px;
-        border-spacing: 5px; /* Reduce the space between columns */
-        border-collapse: collapse; /* Remove any additional space between table borders */
+        font-size: 24px;
+        width: 70%; /* Reduce width to leave space for buttons */
+        margin-right: auto;
     }
 
-    .scoreboard-table th,
-    .scoreboard-table td {
-        padding: 5px 10px; /* Reduce padding inside the cells to bring columns closer */
+    .scoreboard-table th td {
+        font-size: 16px;
+        padding: 5px 10px;
     }
 
     .scoreboard-table .score {
-        font-size: 28px;
-        padding: 5px 10px; /* Smaller padding for the score cells */
+        font-size: 48px;
+        padding: 10px 10px;
+        width: 50px;
     }
 
-    /* Buttons container adjustments */
     .buttons-container {
-        display: flex;
-        justify-content: flex-end;
-        margin-right: 20px;
-        margin-top: 80px;
-        margin-left: 100px;
+        position: absolute;
+        right: 0;
+        margin-top: 40%;
+        margin-right: 12%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .btn-col {
+        padding: 32%;
     }
 
     .btn {
-        width: 20px;
-        height: 20px;
-        font-size: 14px;
+        font-size: 16px;
+        width: 30px;
+        height: 30px;
     }
 
-    /* Winner/Loser container adjustments */
     .winner-container {
-        display: flex;
-        justify-content: flex-end;
-        padding-right: 20px;
-        margin-top: 90px;
-        margin-left: 100px;
+        position: static;
+        margin: 2% 0;
+        width: 100%;
+        text-align: center;
     }
 
-    .winner-png,
-    .loser-png {
-        width: 50px;
-        margin: 10px 0;
+    .winner-png, .loser-png {
+        width: 70px;
+        margin: 15px 0;
     }
 }
+
+
+
+
+
+
 
 
 

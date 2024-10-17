@@ -35,7 +35,7 @@ body {
     padding: 10px;
     font-size: 16px;
     border-radius: 8px;
-    border: 2px solid #B3F36D;
+    border: 2px solid  #bcf57f;
     margin-left: 10px;
 }
 
@@ -54,7 +54,7 @@ body {
 
 .matches-list ul li {
     text-align: center;
-    margin: 12px 0;
+    margin: 16px 0;
     font-size: 20px;
     color: #3A3335;
 }
@@ -66,7 +66,7 @@ body {
 }
 
 .matches-list ul li a:hover {
-    color: #9BF33D;
+    color: #bcf57f;
 }
 
 .pagination {
@@ -153,13 +153,13 @@ body {
 
     /* Move the list of matches further down */
     .matches-list {
-        margin-top: 8%; /* Push the list lower */
+        margin-top: 3%; /* Push the list lower */
         display: flex;
         justify-content: center;
     }
 
     .matches-list ul li {
-        margin: 13px 0;
+        margin: 0 0;
     }
     /* Pagination section adjustment */
     .pagination {

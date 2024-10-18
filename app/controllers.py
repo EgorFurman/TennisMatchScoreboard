@@ -140,18 +140,20 @@ def match_score_post_handler(environ, start_response: Callable, view: Type["Base
     except KeyError:
         raise MissingRequestFieldsError('winner', )
 
-    score = ScoreboardService.update_match_score(
-        score=DatabaseService.get_match_by_uuid_with_players(uuid=uuid).score,
-        winner_name=winner
-    )
+    score = DatabaseService.get_match_by_uuid_with_players(uuid=uuid).score
 
     try:
-        DatabaseService.update_match_score_by_uuid(
-            uuid=uuid,
-            score=score
+        score = ScoreboardService.update_match_score(
+            score=score,
+            winner_name=winner
         )
     except UpdateMatchScoreForFinishedMatchError:
         pass
+
+    DatabaseService.update_match_score_by_uuid(
+        uuid=uuid,
+        score=score
+    )
 
     if ScoreboardService.is_win(score=score):
         DatabaseService.update_match_winner_by_uuid(

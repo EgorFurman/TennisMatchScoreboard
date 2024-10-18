@@ -138,7 +138,7 @@ body {
 /* Existing Styles (kept unchanged) */
 
 /* Additional media query for smartphones */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
     body {
         font-size: 14px;
         padding: 0;
@@ -211,15 +211,16 @@ body {
     }
 
     .winner-container {
-        position: static;
-        margin: 2% 0;
-        width: 100%;
+        position: absolute;
+        right: 0;
+        margin-top: 40%;
+        margin-right: 6%;
         text-align: center;
     }
 
     .winner-png, .loser-png {
-        width: 70px;
-        margin: 15px 0;
+        width: 45px;
+        margin: 10px 0;
     }
 }
 

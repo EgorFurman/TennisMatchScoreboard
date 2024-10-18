@@ -164,7 +164,7 @@ body {
     }
     /* Pagination section adjustment */
     .pagination {
-        bottom: 3%; /* Keep pagination at the bottom but slightly higher */
+        bottom: 1.5%; /* Keep pagination at the bottom but slightly higher */
         width: 100%; /* Ensure pagination takes full width */
         justify-content: center;
     }

@@ -29,7 +29,8 @@ body {
     position: absolute;
     left: 0;
     margin-bottom: -5%;
-    margin-left: 5%;
+    margin-left: 1%;
+    margin-right: 3%;
 }
 
 .player {
@@ -37,7 +38,7 @@ body {
     font-size: 36px;
     color: #3A3335;
     padding: 48px 10px;
-    text-align: center;
+    text-align: right;
 }
 
 .scoreboard-container {
@@ -191,6 +192,7 @@ body {
     }
 
     .player {
+        text-align: center;
         font-size: 24px;
         padding: 10px 5px;
     }

@@ -119,12 +119,12 @@ body {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
     /* Adjusting the logo */
     .logo h1 {
         font-size: 36px;
-        margin-top: 10%; /* Keep the logo closer to the top */
+        margin-top: 3%; /* Keep the logo closer to the top */
         text-align: center;
     }
 
@@ -133,7 +133,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center; /* Center form and button horizontally */
-        margin-top: 45%; /* Push the form further down */
+        margin-top: 35%; /* Push the form further down */
     }
 
     .matches-filter-form label {
@@ -153,7 +153,7 @@ body {
 
     /* Move the list of matches further down */
     .matches-list {
-        font-size: 12px;
+        font-size: 10px;
         margin-top: 3%; /* Push the list lower */
         display: flex;
         justify-content: center;

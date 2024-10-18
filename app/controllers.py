@@ -6,7 +6,7 @@ from app.services import MatchesCacheService, ScoreboardService, DatabaseService
 from app.views import BaseView, ViewToHTML
 from app.exceptions import (
     MethodNotAllowed, PathNotFoundError, MissingRequestHeadersError, MissingRequestFieldsError,
-    MatchNotFoundError, InvalidUsernameError
+    MatchNotFoundError, InvalidUsernameError, UpdateMatchScoreForFinishedMatchError
 )
 
 
@@ -145,10 +145,13 @@ def match_score_post_handler(environ, start_response: Callable, view: Type["Base
         winner_name=winner
     )
 
-    DatabaseService.update_match_score_by_uuid(
-        uuid=uuid,
-        score=score
-    )
+    try:
+        DatabaseService.update_match_score_by_uuid(
+            uuid=uuid,
+            score=score
+        )
+    except UpdateMatchScoreForFinishedMatchError:
+        pass
 
     if ScoreboardService.is_win(score=score):
         DatabaseService.update_match_winner_by_uuid(

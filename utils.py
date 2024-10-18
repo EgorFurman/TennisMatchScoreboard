@@ -4,7 +4,7 @@ from random import choice
 from app.services import DatabaseService
 
 
-SOME_PLAYERS = (
+FILLER_PLAYERS = (
     "EvilArthas",
     "ozon671games",
     "Глеб Биохакер",
@@ -13,7 +13,6 @@ SOME_PLAYERS = (
     "Нейробиолог Алипов",
     "IT Ментор",
     "Раст Коул",
-    "ПроРОК СанБой",
     "Тайлер Дерден",
     "влад пиво",
     "ivanzolo2004",
@@ -35,12 +34,12 @@ SOME_PLAYERS = (
 )
 
 
-def create_some_matches(count: int = 300):
+def add_filler_matches(count: int = 300):
     for _ in range(count):
-        player1 = choice(SOME_PLAYERS)
+        player1 = choice(FILLER_PLAYERS)
 
         while True:
-            player2 = choice(SOME_PLAYERS)
+            player2 = choice(FILLER_PLAYERS)
             if player1 == player2:
                 continue
             break

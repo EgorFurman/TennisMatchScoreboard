@@ -153,6 +153,7 @@ body {
 
     /* Move the list of matches further down */
     .matches-list {
+        font-size: 12px;
         margin-top: 3%; /* Push the list lower */
         display: flex;
         justify-content: center;
@@ -163,7 +164,7 @@ body {
     }
     /* Pagination section adjustment */
     .pagination {
-        bottom: 10%; /* Keep pagination at the bottom but slightly higher */
+        bottom: 5%; /* Keep pagination at the bottom but slightly higher */
         width: 100%; /* Ensure pagination takes full width */
         justify-content: center;
     }

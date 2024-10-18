@@ -129,6 +129,33 @@ body {
 
 }
 
+.navigation {
+    position: absolute;
+    bottom: -15%;
+    margin: 0 auto;
+}
+
+.to-start-btn {
+
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: #bcf57f;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(195, 243, 109, 0.6);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    width: 240px;
+    margin-bottom: -45%;
+}
+
+.to-start-btn:hover {
+    background-color: #b1f569;
+    transform: scale(1.01);
+}
 /* Existing Styles (kept unchanged) */
 
 /* Additional media query for smartphones */
@@ -221,6 +248,14 @@ body {
     .winner-png, .loser-png {
         width: 45px;
         margin: 10px 0;
+    }
+
+    .navigation {
+        position: absolute;
+        left: auto;
+        right: auto;
+        bottom: -30%;
+
     }
 }
 

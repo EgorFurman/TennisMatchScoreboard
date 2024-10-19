@@ -26,17 +26,3 @@ class Router:
             return cls._routes[method][path]
         except KeyError:
             raise PathNotFoundError(path)
-
-
-
-
-    # @classmethod
-    # def route(cls, path: str, method: str = 'GET'):
-    #     def inner(handler: Callable):
-    #         cls._router[method][path] = handler
-    #         return handler
-    #     return inner
-
-    # @classmethod
-    # def resolve(cls):
-    #     pass

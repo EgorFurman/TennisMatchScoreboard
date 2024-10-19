@@ -3,7 +3,6 @@
 Веб-приложение, реализующее табло счёта теннисного матча.
 
 [Тз проекта](https://zhukovsd.github.io/python-backend-learning-course/projects/tennis-scoreboard/)
-![[Pasted image 20241019164744.png]]
 ## Функционал приложения
 Приложение позволяет создавать, просматривать и редактировать теннисные матчи. Реализованы следующие функции:
 
@@ -16,18 +15,24 @@
 git clone https://github.com/EgorFurman/TennisMatchScoreboard.git
 ```
 
-2. Установите MySQL на устройство и создайте базу данных для приложения(имя по умолчанию tennis_scoreboard)
+2. Установите MySQL:  
+	- [Инструкции по установке MySQL](https://dev.mysql.com/doc/mysql-installation-excerpt/8.0/en/)  
+	- Создайте пользователя для базы данных. 
+	- Создайте базу данных `tennis_scoreboard`: 
+	```
+	sql CREATE DATABASE tennis_scoreboard; 	
+	```
 
 3. Создайте виртуальное окружение:
-- **На Windows**
-    ```shell
-     python -m venv venv
-    ```
-- **На MacOS/Linux**
-    ```shell
-	 python3.10 -m venv venv
-    ```
-
+	- **На Windows**
+	    ```shell
+	     python -m venv venv
+	    ```
+	- **На MacOS/Linux**
+	    ```shell
+		 python3.10 -m venv venv
+	    ```
+		
 4. Установите зависимости:
     ```shell
     pip install -r requirements.txt
@@ -44,16 +49,16 @@ git clone https://github.com/EgorFurman/TennisMatchScoreboard.git
 ```
 
 6. Запустите проект:
-- **На Windows**
-    ```shell
-     python main.py
-    ```
-- **На MacOS/Linux**
-    ```shell
-     python3.10 main.py
-    ```
+	- **На Windows**
+	    ```shell
+	     python main.py
+	    ```
+	- **На MacOS/Linux**
+	    ```shell
+	     python3.10 main.py
+	    ```
 ## Стек
-- python3.10 и выше
+- Python 3.10 или выше
 - waitress
 - MySQL
 - SQLAlchemy

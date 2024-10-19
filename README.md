@@ -28,12 +28,12 @@ git clone https://github.com/EgorFurman/TennisMatchScoreboard.git
 	 python3.10 -m venv venv
     ```
 	
-1. Установите зависимости:
+4. Установите зависимости:
     ```shell
     pip install -r requirements.txt
     ```
 
-4. Сконфигурируйте .env в соответствие с примером
+5. Сконфигурируйте .env в соответствие с примером
 ```
 	DB_DRIVER = mysql+pymysql
 	DB_USER = your_username  # Ваше имя пользователя MySQL
@@ -43,7 +43,7 @@ git clone https://github.com/EgorFurman/TennisMatchScoreboard.git
 	DB_NAME = tennis_scoreboard # Имя вашей базы данных
 ```
 
-5. Запустите проект:
+6. Запустите проект:
 - **На Windows**
     ```shell
      python main.py

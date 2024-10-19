@@ -11,13 +11,13 @@
 - Подсчёт очков в текущем матче
 ## Установка и запуск
 1. Склонируйте репозиторий:
-```
-git clone https://github.com/EgorFurman/TennisMatchScoreboard.git
-```
+	```
+	git clone https://github.com/EgorFurman/TennisMatchScoreboard.git
+	```
 
 2. Установите MySQL:  
 	- [Инструкции по установке MySQL](https://dev.mysql.com/doc/mysql-installation-excerpt/8.0/en/)  
-	- Создайте пользователя для базы данных. 
+	- Создайте пользователя для базы данных.
 	- Создайте базу данных `tennis_scoreboard`: 
 	```
 	sql CREATE DATABASE tennis_scoreboard; 	
@@ -39,14 +39,14 @@ git clone https://github.com/EgorFurman/TennisMatchScoreboard.git
     ```
 
 5. Сконфигурируйте .env в соответствие с примером
-```
+	```
 	DB_DRIVER = mysql+pymysql
 	DB_USER = your_username  # Ваше имя пользователя MySQL
 	DB_PASSWORD = your_password  # Ваш пароль MySQL
 	DB_HOST = localhost
 	DB_PORT = 3306
 	DB_NAME = tennis_scoreboard # Имя вашей базы данных
-```
+	```
 
 6. Запустите проект:
 	- **На Windows**

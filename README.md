@@ -48,7 +48,12 @@
      DB_NAME = tennis_scoreboard # Имя вашей базы данных
     ```
 
-6. Запустите проект:
+6. Обновите базу данных до последней версии
+   ```shell
+   alembic upgrade head
+   ```
+
+7. Запустите проект:
 	- **На Windows**
 	    ```shell
 	    python main.py

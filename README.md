@@ -1,8 +1,3 @@
-# Проект “Табло теннисного матча”
-
-Веб-приложение, реализующее табло счёта теннисного матча.
-
-[Тз проекта](https://zhukovsd.github.io/python-backend-learning-course/projects/tennis-scoreboard/)
 ## Функционал приложения
 Приложение позволяет создавать, просматривать и редактировать теннисные матчи. Реализованы следующие функции:
 
@@ -40,12 +35,12 @@
 
 5. Сконфигурируйте `.env` в соответствие с примером
 	```
-	DB_DRIVER = mysql+pymysql
-	DB_USER = your_username  # Ваше имя пользователя MySQL
-	DB_PASSWORD = your_password  # Ваш пароль MySQL
-	DB_HOST = localhost
-	DB_PORT = 3306
-	DB_NAME = tennis_scoreboard # Имя вашей базы данных
+		DB_DRIVER = mysql+pymysql
+		DB_USER = your_username  # Ваше имя пользователя MySQL
+		DB_PASSWORD = your_password  # Ваш пароль MySQL
+		DB_HOST = localhost
+		DB_PORT = 3306
+		DB_NAME = tennis_scoreboard # Имя вашей базы данных
 	```
 
 6. Запустите проект:

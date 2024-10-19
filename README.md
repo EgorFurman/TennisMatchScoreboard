@@ -41,7 +41,7 @@
     pip install -r requirements.txt
     ```
 
-5. Сконфигурируйте `.env` в соответствие с примером
+5. Сконфигурируйте `.env` в соответствие с примером:
      ```
      DB_DRIVER = mysql+pymysql
      DB_USER = your_username  # Ваше имя пользователя MySQL
@@ -51,7 +51,7 @@
      DB_NAME = tennis_scoreboard # Имя вашей базы данных
     ```
 
-6. Обновите базу данных до последней версии
+6. Обновите базу данных до последней версии:
    ```shell
    alembic upgrade head
    ```

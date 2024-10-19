@@ -27,7 +27,7 @@ git clone https://github.com/EgorFurman/TennisMatchScoreboard.git
     ```shell
 	 python3.10 -m venv venv
     ```
-	
+
 4. Установите зависимости:
     ```shell
     pip install -r requirements.txt

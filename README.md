@@ -19,9 +19,9 @@
 	- [Инструкции по установке MySQL](https://dev.mysql.com/doc/mysql-installation-excerpt/8.0/en/)  
 	- Создайте пользователя для базы данных.
 	- Создайте базу данных `tennis_scoreboard`: 
-	```
-	sql CREATE DATABASE tennis_scoreboard; 	
-	```
+		```
+		sql CREATE DATABASE tennis_scoreboard; 	
+		```
 
 3. Создайте виртуальное окружение:
 	- **На Windows**
@@ -35,10 +35,10 @@
 		
 4. Установите зависимости:
     ```shell
-    pip install -r requirements.txt
+	    pip install -r requirements.txt
     ```
 
-5. Сконфигурируйте .env в соответствие с примером
+5. Сконфигурируйте `.env` в соответствие с примером
 	```
 	DB_DRIVER = mysql+pymysql
 	DB_USER = your_username  # Ваше имя пользователя MySQL
